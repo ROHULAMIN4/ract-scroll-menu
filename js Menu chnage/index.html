@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practise</title>
+  </head>
+  <style>
+    * {
+      margin: "0";
+      padding: "0";
+    }
+    body {
+      scroll-behavior: smooth;
+      height: 2000px;
+    }
+    ul {
+      display: flex;
+      justify-content: space-around;
+      background-color: black;
+      padding: 20px;
+      position: sticky;
+      top: 0;
+    }
+    li {
+      list-style: none;
+      font-size: 24px;
+      color: rgb(0, 253, 169);
+      font-weight: 900;
+    }
+    .std {
+      color: white;
+      background-color: rgb(49, 253, 13);
+      padding: 10px;
+    }
+  </style>
+  <body>
+    <ul>
+      <li id="id1">ailo</li>
+      <li id="id2">gelo</li>
+      <li id="id3">roilo</li>
+    </ul>
+    <script>
+      window.addEventListener("scroll", () => {
+        const st1 = document.getElementById("id1");
+        const st2 = document.getElementById("id2");
+        const st3 = document.getElementById("id3");
+        if (window.pageYOffset > 150 && window.pageYOffset < 299) {
+          st1.classList.add("std");
+          st2.classList.remove("std");
+          st3.classList.remove("std");
+        } else if (window.pageYOffset > 300 && window.pageYOffset < 599) {
+          st1.classList.remove("std");
+          st2.classList.add("std");
+          st3.classList.remove("std");
+        } else if (window.pageYOffset > 600 && window.pageYOffset < 900) {
+          st1.classList.remove("std");
+          st2.classList.remove("std");
+          st3.classList.add("std");
+        }
+      });
+    </script>
+  </body>
+</html>
